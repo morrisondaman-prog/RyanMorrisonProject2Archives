@@ -42,6 +42,14 @@ body, html {
   }
   
 
+.text-content {
+	width: 100%;
+	text-align: left;
+}
+
+
+
+
  /* The text-block class selector controls the text-box on screens >800px. You will also need to adjust values in the next text-box selector. */
 .text-block {
     display: block;
