@@ -123,7 +123,7 @@ Button-box class selector uses Flex Box Design (flex display) to scale the eleme
 .button-box {
     display: flex;
     height: 200px;
-    border: 0px solid #;
+  border: 0px solid transparent;
     align-items: center;
     justify-content: center;
   }
@@ -176,12 +176,23 @@ CSS Flexbox creates responsive layouts for images, text, and other content. Reus
    width: 100%;
  }
 
+/* Caption text used under grid images to match text-block styling */
+.grid-caption {
+  font-family: inherit;
+  font-size: 1.1em; /* slightly smaller than main text-block */
+  line-height: 1.6;
+  color: inherit;
+  margin-top: 8px;
+  text-align: left;
+  padding: 0 10px 20px 10px; /* space around caption */
+}
+
 /* CSS Grid Responsive layout - makes grid a one column-layout instead of two or three columns */
 @media screen and (max-width: 800px) {
 .column {
        flex: 75%;
        max-width: 75%;
-   }
+  padding: 0 8px; /* give columns a bit more horizontal breathing room */
  }
 
  
@@ -197,9 +208,10 @@ Use CSS box model to style image content. Adjust frame/filter class selector pro
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    filter: grayscale(%);
-    filter: blur(px);
-    filter: hue-rotate(deg);
+  /* Example filters -- uncomment and set values if you want effects */
+  /* filter: grayscale(100%); */
+  /* filter: blur(2px); */
+  /* filter: hue-rotate(20deg); */
 }
 
 
@@ -218,9 +230,10 @@ Polaroid class selector and container. Adjust Polaroid width here. */
 
 .polaroid img {
     width: 100%;  /* Keep 100% */
-    filter: grayscale(%);
-    filter: blur(px);
-    filter: hue-rotate(deg);
+  /* Example filters -- uncomment and set values if you want effects */
+  /* filter: grayscale(100%); */
+  /* filter: blur(2px); */
+  /* filter: hue-rotate(20deg); */
   }
 
 .polaroid-caption {
@@ -284,7 +297,7 @@ This code controls that cool parallax image and scrolling effect. Change the ima
         height: 400px;
 	  }
   }
-
+}
 
 /*  - YouTube Video -
 Uses container to control video across different screen sizes. */
@@ -359,4 +372,4 @@ Add a Copyright */
     font: inherit;
     font-size: inherit;
     text-align: center;    
-  }
+  }   
