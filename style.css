@@ -53,7 +53,8 @@ body, html {
  /* The text-block class selector controls the text-box on screens >800px. You will also need to adjust values in the next text-box selector. */
 .text-block {
     display: block;
-    width: 55%;
+    width: 100%;
+	max-width: 800px;
     background-color: inherit;
     padding: 0px;
     border: 0px solid black;
@@ -174,8 +175,10 @@ CSS Flexbox creates responsive layouts for images, text, and other content. Reus
 /* Change max-width value depending on number of columns. */
 .column {
    flex: 25%;
-   max-width: 25%;
+   max-width: 800px;
    padding: 0 4px;
+	width: 100%
+	margin: 20px auto
  }
 
 .column img  {
