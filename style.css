@@ -160,32 +160,38 @@ Button-box class selector uses Flex Box Design (flex display) to scale the eleme
 CSS Flexbox creates responsive layouts for images, text, and other content. Reuse .column class to create additional grids with different proportions for specific content */
 
 .flexbox-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
- }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* lets it adapt on smaller screens */
+  gap: 20px; /* spacing between columns */
+  margin: 20px;
+}
 
 .row {
-   display: flex;
-   flex-wrap: wrap;
-   padding: 0 4px;
-   justify-content: center;
- }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* keeps it centered and not too wide */
+}
 
 /* Change max-width value depending on number of columns. */
 .column {
-   flex: 25%;
-   max-width: 800px;
-   padding: 0 4px;
-	width: 100%
-	margin: 20px auto
- }
+  flex: 1 1 30%; /* grow/shrink, basis 30% of row */
+  min-width: 280px; /* don’t shrink smaller than this */
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-.column img  {
-   margin-top: 8px;
-   vertical-align: middle;
-   width: 100%;
- }
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
 
 /* Caption text used under grid images to match text-block styling */
 .grid-caption {
