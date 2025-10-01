@@ -85,6 +85,43 @@ body, html {
     }
   }
 
+.content-block {
+  max-width: 900px; /* nice wide text */
+  margin: 40px auto;
+  text-align: left;
+}
+
+.content-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.content-block p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+}
+
+.text-block {
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.text-block h2 {
+  margin-bottom: 10px;
+}
+
+.text-block p,
+.text-block ul {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
 
  /* The pull-quote class selector uses large text and border top/bottom properties.  */
 .pull-quote {
